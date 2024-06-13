@@ -3,5 +3,6 @@ $("#customer_nav").on('click',()=>{
     $('#customer_section').css({display:'block'});
     $('#item_section').css({display:'none'});
     $('#order_section').css({display:'none'});
+    $('#order_details_section').css({display:'none'});
 });
 

@@ -2,6 +2,7 @@ $('#home_section').css({display:'block'});
 $('#customer_section').css({display:'none'});
 $('#item_section').css({display:'none'});
 $('#order_section').css({display:'none'});
+$('#order_details_section').css({display:'none'});
 
 //home view
 $("#home_nav").on('click',()=>{
@@ -9,5 +10,6 @@ $("#home_nav").on('click',()=>{
     $('#customer_section').css({display:'none'});
     $('#item_section').css({display:'none'});
     $('#order_section').css({display:'none'});
+    $('#order_details_section').css({display:'none'});
 });
 
