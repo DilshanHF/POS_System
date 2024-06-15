@@ -49,17 +49,17 @@ function loadOrderDetails() {
         discount.val(order_db[index].discount);
 
         $('tbody').eq(4).empty();
-        for(let i=0; i<order_details_db.length; i++){
-            if (orderId === order_details_db[i].order_id){
-                let total = order_details_db[i].unit_price * order_details_db[i].qty;
+        for(let i=0; i<order_detail_db.length; i++){
+            if (orderId === order_detail_db[i].order_id){
+                let total = order_detail_db[i].unit_price * order_details_db[i].qty;
                 let item_index = item_db.findIndex(item => item.item_code === order_details_db[i].item_id);
 
                 $('tbody').eq(4).append(
                     `<tr>
-                        <th scope="row">${order_details_db[i].item_id}</th>
+                        <th scope="row">${order_detail_db[i].item_id}</th>
                         <td>${item_db[item_index].description}</td>
-                        <td>${order_details_db[i].unit_price}</td>
-                        <td>${order_details_db[i].qty}</td>
+                        <td>${order_detail_db[i].unit_price}</td>
+                        <td>${order_detail_db[i].qty}</td>
                         <td>${total}</td>
                      </tr>`
                 );

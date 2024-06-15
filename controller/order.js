@@ -160,7 +160,7 @@ order_btn.on('click', () => {
                         //save order details
                         cart.forEach((cart_item) => {
                             let order_detail = new OrderDetailModel(orderId, cart_item.itemId, cart_item.qty, cart_item.unitPrice);
-                            order_details_db.push(order_detail);
+                            order_detail_db.push(order_detail);
 
                             //update item qty
                             let index = item_db.findIndex(item => item.item_code === cart_item.itemId);
@@ -257,14 +257,14 @@ order_id.on('input', () => {
         date.val(order_db[index].date);
 
         cart.splice(0, cart.length);
-        for(let i=0; i<order_details_db.length; i++){
-            if (orderId === order_details_db[i].order_id){
-                let total = order_details_db[i].unit_price * order_details_db[i].qty;
+        for(let i=0; i<order_detail_db.length; i++){
+            if (orderId === order_detail_db[i].order_id){
+                let total = order_detail_db[i].unit_price * order_detail_db[i].qty;
 
                 let cart_item = {
-                    itemId: order_details_db[i].item_id,
-                    unitPrice: order_details_db[i].unit_price,
-                    qty: order_details_db[i].qty,
+                    itemId: order_detail_db[i].item_id,
+                    unitPrice: order_detail_db[i].unit_price,
+                    qty: order_detail_db[i].qty,
                     total: total
                 }
                 cart.push(cart_item);
