@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Point of Sale, POS System">
+    <meta name="description" content="Discover our cutting-edge Point of Sale (POS) system designed to revolutionize
+        the way businesses manage transactions. This advanced POS solution combines user-friendly interfaces with
+        powerful backend capabilities, providing a seamless and efficient sales process. ">
+    <meta name="author" content="Dilshan Fonseka">
     <title>INRICH</title>
-</head>
-<body>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Manage Customer</title>
     <link rel="stylesheet" href="assests/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="assests/style/style.css">
@@ -48,9 +45,10 @@
     </nav>
 </header>
 <!------------------------------Home section----------------------------->
-<section id="home_section">
+<section id="home">
     <div class="container">
         <div class="row">
+
             <div class="col col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
                 <div class="card">
                     <div class="card-body">
@@ -86,6 +84,15 @@
 
         </div>
         <div class="row">
+
+            <div class="col col-xxl-8 col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12">
+                <div class="chart-card">
+                    <h3 class="chart-title">Revenue</h3>
+                    <div>
+                        <canvas id="lineChart"></canvas>
+                    </div>
+                </div>
+            </div>
             <div class="col col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
                 <img src="assests/img/Charts-image.png" class="image-class" alt="image">
             </div>
@@ -137,7 +144,7 @@
                             <option selected>customer_id</option>
                             <option>name</option>
                             <option>address</option>
-                            <option>salary</option>
+                            <option>contact</option>
                         </select>
                     </div>
                     <table class="table table-hover">
@@ -157,7 +164,7 @@
     </div>
 </section>
 
-<!---------------------------------item section------------------------->
+<!---------------------------------item section---------------------------------->
 <section id="item_section">
     <div class="container">
         <div class="row mb-3">
@@ -432,9 +439,13 @@
 
 <script src="assests/jquaery/lib/jquery-3.7.1.min.js"></script>
 <script src="assests/bootstrap/js/bootstrap.min.js"></script>
-<script src="controller/home.js"></script>
-<script src="controller/customer.js"></script>
-<script src="controller/item.js"></script>
-<script src="controller/order.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.32/dist/sweetalert2.all.min.js"></script>
+
+<script type="module" src="controller/home.js"></script>
+<script type="module" src="controller/customer.js"></script>
+<script type="module" src="controller/item.js"></script>
+<script type="module" src="controller/order.js"></script>
+<script type="module" src="controller/orderdetail.js"></script>
 </body>
 </html>
