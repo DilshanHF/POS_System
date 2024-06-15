@@ -1,5 +1,7 @@
 import {CustomerModel} from "../model/customerModel.js";
 import {customer_db} from "../db/db.js";
+import {setCustomerIds} from "./order.js";
+import {setCounts} from "./home.js";
 
 //customer form
 

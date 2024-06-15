@@ -1,6 +1,9 @@
 import {OrderModel} from "../model/orderModel.js";
 import {order_db,order_detail_db,item_db,customer_db} from "../db/db.js";
 import {OrderDetailModel} from "../model/orderDetailModel.js";
+import {loadOrderTable} from "./orderdetail.js";
+import {loadItemTable} from "./item.js";
+import {setCounts} from "./home.js";
 
 
 const order_id = $('#order_Id');
